@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASMO Control Tower</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div id="toastContainer"></div>
+
+<div id="syncOverlay">
+  <div class="sync-modal">
+    <div class="sync-logo">🔄</div>
+    <h2>Refreshing SAP Data</h2>
+    <p>Fetching OData entities and rebuilding the DuckDB dataset. This may take a minute…</p>
+    <div class="sync-steps">
+      <div class="sync-step active" id="step1"><div class="spinner"></div> Fetching OData entities…</div>
+      <div class="sync-step" id="step2">⏳ Writing raw tables to DuckDB</div>
+      <div class="sync-step" id="step3">⏳ Running transformations</div>
+    </div>
+  </div>
+</div>
+
+<div class="top-bar">
+  <div class="brand">ASMO <span>Control Tower</span></div>
+
+  <div class="global-search" id="globalSearchWrap">
+    <span class="search-icon">🔍</span>
+    <input
+      type="text"
+      id="globalSearch"
+      placeholder="Search POs · type 45… for Customer PO · type 50… for Customer PR"
+      autocomplete="off"
+    />
+    <button class="search-clear" id="globalSearchClear" title="Clear search">✕</button>
+    <div class="search-dropdown" id="searchDropdown"></div>
+  </div>
+
+  <div class="top-bar-right">
+    <div class="server-time" id="serverTime">—</div>
+    <span class="dark-label">🌙</span>
+    <div class="dark-toggle" id="darkToggle" title="Toggle dark mode"></div>
+  </div>
+</div>
+
+<div class="app-container">
+
+  <aside>
+    <div class="sidebar-logo">
+      <div class="logo-dot"></div>
+      ProDash
+    </div>
+
+    <div class="nav-section-label">Analytics</div>
+    <nav>
+      <ul>
+        <li class="active" data-view="overview">
+          <span class="nav-icon">📊</span> Overview
+        </li>
+        <li data-view="orders">
+          <span class="nav-icon">📦</span> Purchase Orders
+        </li>
+        <li data-view="suppliers">
+          <span class="nav-icon">🏭</span> Suppliers
+        </li>
+      </ul>
+    </nav>
+
+    <div class="nav-section-label">Risk & Delivery</div>
+    <nav>
+      <ul>
+        <li data-view="risk">
+          <span class="nav-icon">⚠️</span> Supplier Risk
+        </li>
+        <li data-view="overdue">
+          <span class="nav-icon">🚨</span> Overdue POs
+          <span class="nav-badge" id="overdueBadge" style="display:none;"></span>
+        </li>
+        <li data-view="delivery">
+          <span class="nav-icon">🚚</span> Delivery Performance
+        </li>
+      </ul>
+    </nav>
+
+    <div class="sidebar-footer">
+      ProDash v3.3 · SAP S/4HANA
+    </div>
+  </aside>
+
+  <main>
+
+    <div class="page-header">
+      <div class="page-header-left">
+        <h1 id="pageTitle">Procurement Overview</h1>
+        <div class="subtitle">Live visibility into purchasing and deliveries</div>
+        <div class="status-pills">
+          <span class="status-pill" id="pillApi">API: checking…</span>
+          <span class="status-pill" id="pillReady">Ready: checking…</span>
+          <span class="status-pill" id="pillSync">Last sync: —</span>
+        </div>
+      </div>
+      <div class="button-row">
+        <button id="reloadBtn" class="icon-btn" title="Reload current view">↻ Reload</button>
+        <button id="exportBtn" class="secondary" title="Export current view to CSV">⬇ Export CSV</button>
+        <button class="primary" id="refreshBtn">
+          <span id="refreshBtnText">⬇ Refresh SAP Data</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ── Overview ─────────────────────────────────────────────────────── -->
+    <section id="overview" class="view-section active">
+
+      <div class="kpi-grid">
+        <div class="kpi-card" style="--kpi-accent: var(--brand-brown);">
+          <span class="kpi-icon">🧾</span>
+          <h3>Total Purchase Orders</h3>
+          <div class="value" id="kpi-pos">—</div>
+        </div>
+        <div class="kpi-card" style="--kpi-accent: var(--brand-blue);">
+          <span class="kpi-icon">📋</span>
+          <h3>Total Lines</h3>
+          <div class="value" id="kpi-lines">—</div>
+          <div class="sub" id="kpi-open-lines"></div>
+        </div>
+        <div class="kpi-card" style="--kpi-accent: var(--brand-orange);">
+          <span class="kpi-icon">💰</span>
+          <h3>Estimated Spend</h3>
+          <div class="value" style="font-size:20px;" id="kpi-spend">—</div>
+        </div>
+        <div class="kpi-card" style="--kpi-accent: var(--brand-green);">
+          <span class="kpi-icon">✅</span>
+          <h3>Fulfillment Rate</h3>
+          <div class="value" style="color:var(--brand-green);" id="kpi-rate">—</div>
+          <div class="sub" id="kpi-fulfilled-lines"></div>
+        </div>
+        <div class="kpi-card" style="--kpi-accent: var(--brand-purple);">
+          <span class="kpi-icon">🏭</span>
+          <h3>Active Suppliers</h3>
+          <div class="value" style="color:var(--brand-blue);" id="kpi-suppliers">—</div>
+          <div class="sub" id="kpi-plants"></div>
+        </div>
+      </div>
+
+      <div class="kpi-grid-6" style="margin-bottom: 20px;">
+        <div class="kpi-card" style="--kpi-accent: var(--brand-green);">
+          <h3>Fully Delivered</h3>
+          <div class="value" style="color:var(--brand-green); font-size:22px;" id="kpi-s-delivered">—</div>
+        </div>
+        <div class="kpi-card" style="--kpi-accent:#15803D;">
+          <h3>Partially Delivered</h3>
+          <div class="value" style="color:#15803D; font-size:22px;" id="kpi-s-partial">—</div>
+        </div>
+        <div class="kpi-card" style="--kpi-accent: var(--brand-orange);">
+          <h3>Shipped (Full)</h3>
+          <div class="value" style="color:var(--brand-orange); font-size:22px;" id="kpi-s-shipped-full">—</div>
+        </div>
+        <div class="kpi-card" style="--kpi-accent:#B45309;">
+          <h3>Shipped (Partial)</h3>
+          <div class="value" style="color:#B45309; font-size:22px;" id="kpi-s-shipped-partial">—</div>
+        </div>
+        <div class="kpi-card" style="--kpi-accent: var(--brand-blue);">
+          <h3>PO Created</h3>
+          <div class="value" style="color:var(--brand-blue); font-size:22px;" id="kpi-s-open">—</div>
+        </div>
+        <div class="kpi-card" style="--kpi-accent: var(--text-muted);">
+          <h3>Cancelled</h3>
+          <div class="value" style="color:var(--text-muted); font-size:22px;" id="kpi-s-cancelled">—</div>
+        </div>
+      </div>
+
+      <div class="chart-grid-2">
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <h3>Monthly Spend Trend</h3>
+            <span class="chart-badge" id="spendBadge">18 months</span>
+          </div>
+          <div class="canvas-wrap tall"><canvas id="spendChart"></canvas></div>
+        </div>
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <h3>Status Distribution</h3>
+          </div>
+          <div class="canvas-wrap"><canvas id="statusChart"></canvas></div>
+        </div>
+      </div>
+
+      <div class="chart-grid-3">
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <h3>Top 10 Suppliers by Spend</h3>
+          </div>
+          <div class="canvas-wrap tall"><canvas id="suppliersChart"></canvas></div>
+        </div>
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <h3>Spend by Material Group</h3>
+          </div>
+          <div class="canvas-wrap tall"><canvas id="matGroupChart"></canvas></div>
+        </div>
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <h3>Supplier Risk Scores</h3>
+          </div>
+          <div class="canvas-wrap tall"><canvas id="riskChart"></canvas></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ── Purchase Orders ───────────────────────────────────────────────── -->
+    <section id="orders" class="view-section">
+      <div class="table-card">
+        <div class="table-card-header">
+          <h3>Purchase Orders Dataset</h3>
+          <div class="table-card-tools">
+            <span class="record-count" id="ordersCount">0 records</span>
+            <button class="filter-toggle-btn" id="filterToggleBtn">
+              ⚙ Filters <span id="filterChevron">▾</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="table-search-row">
+          <div class="table-search-wrap">
+            <span class="ts-icon">🔍</span>
+            <input type="text" id="f-search"
+              placeholder="Search PO, Customer PO (45…), Customer PR (50…), supplier, material…" />
+          </div>
+          <select id="f-status" style="max-width:180px;">
+            <option value="">All Statuses</option>
+            <option>Fully Delivered</option>
+            <option>Partially Delivered</option>
+            <option>Shipped (Full)</option>
+            <option>Shipped (Partial)</option>
+            <option>PO Created</option>
+            <option>Cancelled</option>
+          </select>
+          <button id="ordersApplyBtn" class="primary" style="white-space:nowrap;">Apply</button>
+          <button id="ordersClearBtn" style="white-space:nowrap;">Clear</button>
+        </div>
+
+        <div class="filter-panel" id="filterPanel">
+          <div class="filter-panel-inner">
+            <div class="filter-group">
+              <label>Supplier</label>
+              <input type="text" id="f-supplier" placeholder="ID or name" />
+            </div>
+            <div class="filter-group">
+              <label>Material</label>
+              <input type="text" id="f-material" placeholder="Code or description" />
+            </div>
+            <div class="filter-group">
+              <label>PO Number</label>
+              <input type="text" id="f-po" placeholder="e.g. 4800001234" />
+            </div>
+            <div class="filter-group">
+              <label>
+                Customer PO #
+                <span style="font-size:10px;color:var(--brand-orange);font-weight:600;margin-left:4px;">45-series</span>
+              </label>
+              <input type="text" id="f-customer-po" placeholder="e.g. 4507…" />
+            </div>
+            <div class="filter-group">
+              <label>
+                Customer PR #
+                <span style="font-size:10px;color:var(--brand-blue);font-weight:600;margin-left:4px;">50-series</span>
+              </label>
+              <input type="text" id="f-pr" placeholder="e.g. 5021…" />
+            </div>
+            <div class="filter-group">
+              <label>Material Group</label>
+              <input type="text" id="f-matgroup" placeholder="e.g. A001" />
+            </div>
+            <div class="filter-group">
+              <label>Plant</label>
+              <input type="text" id="f-plant" placeholder="Plant code" />
+            </div>
+            <div class="filter-group">
+              <label style="display:flex;align-items:center;gap:8px;cursor:pointer;margin-top:18px;">
+                <input type="checkbox" id="f-24h" style="width:auto;cursor:pointer;">
+                <span style="font-size:11px;font-weight:600;color:var(--text-muted);text-transform:uppercase;">
+                  Last 24 Hours
+                </span>
+              </label>
+            </div>
+            <div class="filter-group">
+              <label>Date From</label>
+              <input type="date" id="f-from" />
+            </div>
+            <div class="filter-group">
+              <label>Date To</label>
+              <input type="date" id="f-to" />
+            </div>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table id="ordersTable">
+            <thead>
+              <tr>
+                <th>PO #</th>
+                <th>Customer PO # <span style="font-size:10px;opacity:0.55;font-weight:400;">45s</span></th>
+                <th>Customer PR # <span style="font-size:10px;opacity:0.55;font-weight:400;">50s</span></th>
+                <th>Date</th>
+                <th>Supplier</th>
+                <th>Material</th>
+                <th>Plant</th>
+                <th>Qty</th>
+                <th>Spend</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="ordersBody">
+              <tr><td colspan="10" style="text-align:center;padding:32px;color:var(--text-muted);">
+                Use the search bar above or click Apply to load data.
+              </td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Suppliers ─────────────────────────────────────────────────────── -->
+    <section id="suppliers" class="view-section">
+      <div class="table-card">
+        <div class="table-card-header">
+          <h3>Supplier Spend Analysis</h3>
+          <div class="table-card-tools">
+            <span class="record-count" id="suppliersCount">0 records</span>
+          </div>
+        </div>
+        <div class="table-search-row">
+          <div class="table-search-wrap">
+            <span class="ts-icon">🔍</span>
+            <input type="text" id="sup-search" placeholder="Filter by supplier ID or name…" />
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table id="suppliersTable">
+            <thead>
+              <tr>
+                <th>Supplier Name</th>
+                <th>Supplier ID</th>
+                <th>Total Spend</th>
+                <th>Delivery Rate</th>
+              </tr>
+            </thead>
+            <tbody id="suppliersBody">
+              <tr><td colspan="12" style="text-align:center;padding:32px;color:var(--text-muted);">Loading…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Supplier Risk ──────────────────────────────────────────────────── -->
+    <section id="risk" class="view-section">
+      <div class="table-card">
+        <div class="table-card-header">
+          <h3>Supplier Risk Tiers</h3>
+          <div class="table-card-tools">
+            <span class="record-count" id="riskCount">0 records</span>
+          </div>
+        </div>
+        <div class="table-search-row">
+          <div class="table-search-wrap">
+            <span class="ts-icon">🔍</span>
+            <input type="text" id="risk-search" placeholder="Filter by supplier…" />
+          </div>
+          <select id="risk-tier-filter" style="max-width:160px;">
+            <option value="">All Tiers</option>
+            <option>High Risk</option>
+            <option>Medium Risk</option>
+            <option>Low Risk</option>
+          </select>
+        </div>
+        <div class="table-wrap">
+          <table id="riskTable">
+            <thead>
+              <tr>
+                <th>Supplier Name</th>
+                <th>ID</th>
+                <th>Risk Score</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="riskBody">
+              <tr><td colspan="10" style="text-align:center;padding:32px;color:var(--text-muted);">Loading…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Overdue POs ────────────────────────────────────────────────────── -->
+    <section id="overdue" class="view-section">
+      <div class="table-card">
+        <div class="table-card-header">
+          <h3>Overdue Open POs</h3>
+          <div class="table-card-tools">
+            <span class="record-count" id="overdueCount">0 records</span>
+          </div>
+        </div>
+        <div class="table-search-row">
+          <div class="table-search-wrap">
+            <span class="ts-icon">🔍</span>
+            <input type="text" id="overdue-search" placeholder="Filter by PO, supplier, material…" />
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table id="overdueTable">
+            <thead>
+              <tr>
+                <th>PO #</th>
+                <th>Customer PO <span style="font-size:10px;opacity:0.55;font-weight:400;">45s</span></th>
+                <th>Customer PR <span style="font-size:10px;opacity:0.55;font-weight:400;">50s</span></th>
+                <th>Age (Days)</th>
+                <th>Overdue By</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="overdueBody">
+              <tr><td colspan="19" style="text-align:center;padding:32px;color:var(--text-muted);">Loading…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Delivery Performance ───────────────────────────────────────────── -->
+    <section id="delivery" class="view-section">
+      <div class="table-card">
+        <div class="table-card-header">
+          <h3>Delivery Performance by Supplier</h3>
+          <div class="table-card-tools">
+            <span class="record-count" id="deliveryCount">0 records</span>
+          </div>
+        </div>
+        <div class="table-search-row">
+          <div class="table-search-wrap">
+            <span class="ts-icon">🔍</span>
+            <input type="text" id="delivery-search" placeholder="Filter by supplier or plant…" />
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table id="deliveryTable">
+            <thead>
+              <tr>
+                <th>#</th><th>Supplier ID</th><th>Supplier Name</th><th>Plant</th>
+                <th>Total Lines</th><th>Delivered</th><th>Pending</th>
+                <th>Delivery Rate</th>
+                <th>Avg Days→ASN</th><th>Avg Planned</th><th>Avg Delay</th>
+              </tr>
+            </thead>
+            <tbody id="deliveryBody">
+              <tr><td colspan="11" style="text-align:center;padding:32px;color:var(--text-muted);">Loading…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
+<div class="drawer" id="detailDrawer">
+  <div class="drawer-header">
+    <button class="drawer-close" onclick="closeDrawer()">&times;</button>
+    <h2 id="drawerTitle">Details</h2>
+    <p id="drawerSubtitle"></p>
+  </div>
+  <div class="drawer-body" id="drawerBody"></div>
+  <div class="drawer-footer">
+    <button class="secondary" onclick="closeDrawer()" style="flex:1;">Close</button>
+    <button class="primary" style="flex:1;">View in SAP</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
