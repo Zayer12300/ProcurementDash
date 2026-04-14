@@ -1,0 +1,4694 @@
+{
+  "generated_at": "2026-04-14T07:40:08Z",
+  "entities": {
+    "I_PurchaseOrder": {
+      "entity": "I_PurchaseOrder",
+      "total_rows": 18418,
+      "total_columns": 62,
+      "profiled_at": "2026-04-14T07:40:39Z",
+      "columns": {
+        "purchase_order": {
+          "dtype": "int64",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 18418,
+          "min": 4800000000.0,
+          "max": 4800018417.0,
+          "mean": 4800009208.5,
+          "median": 4800009208.5,
+          "zeros": 0
+        },
+        "purchase_order_type": {
+          "dtype": "object",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "top_values": [
+            {
+              "value": "ZA",
+              "count": 18418
+            }
+          ]
+        },
+        "purchase_order_subtype": {
+          "dtype": "float64",
+          "total": 18418,
+          "null_count": 18418,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "purchasing_document_origin": {
+          "dtype": "object",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 2,
+          "top_values": [
+            {
+              "value": "B",
+              "count": 18416
+            },
+            {
+              "value": 9,
+              "count": 2
+            }
+          ]
+        },
+        "purchasing_document_is_aged": {
+          "dtype": "bool",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": 0.0,
+          "zeros": 18418
+        },
+        "created_by_user": {
+          "dtype": "object",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 4,
+          "top_values": [
+            {
+              "value": "ASMO_AUTOPO",
+              "count": 18414
+            },
+            {
+              "value": "MALTWAIJRI",
+              "count": 2
+            },
+            {
+              "value": "MALSALEEM",
+              "count": 1
+            },
+            {
+              "value": "MAELAIW",
+              "count": 1
+            }
+          ]
+        },
+        "creation_date": {
+          "dtype": "object",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 212
+        },
+        "purchase_order_date": {
+          "dtype": "object",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 212
+        },
+        "language": {
+          "dtype": "object",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "top_values": [
+            {
+              "value": "EN",
+              "count": 18418
+            }
+          ]
+        },
+        "purchasing_document_deletion_code": {
+          "dtype": "float64",
+          "total": 18418,
+          "null_count": 18418,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "release_is_not_completed": {
+          "dtype": "bool",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 2,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": 0.0,
+          "zeros": 18405
+        },
+        "purchasing_completeness_status": {
+          "dtype": "bool",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": 0.0,
+          "zeros": 18418
+        },
+        "purchasing_processing_status": {
+          "dtype": "int64",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 4,
+          "min": 1.0,
+          "max": 5.0,
+          "mean": 4.5346,
+          "median": 5.0,
+          "zeros": 0
+        },
+        "purg_release_sequence_status": {
+          "dtype": "object",
+          "total": 18418,
+          "null_count": 2823,
+          "fill_pct": 84.7,
+          "distinct": 1,
+          "top_values": [
+            {
+              "value": "X",
+              "count": 15595
+            }
+          ]
+        },
+        "release_code": {
+          "dtype": "float64",
+          "total": 18418,
+          "null_count": 2810,
+          "fill_pct": 84.7,
+          "distinct": 2,
+          "min": 3.0,
+          "max": 5.0,
+          "mean": 4.9983,
+          "median": 5.0,
+          "zeros": 0
+        },
+        "purchasing_release_strategy": {
+          "dtype": "float64",
+          "total": 18418,
+          "null_count": 2810,
+          "fill_pct": 84.7,
+          "distinct": 1,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0,
+          "zeros": 0
+        },
+        "company_code": {
+          "dtype": "int64",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 1000.0,
+          "max": 1000.0,
+          "mean": 1000.0,
+          "median": 1000.0,
+          "zeros": 0
+        },
+        "purchasing_organization": {
+          "dtype": "int64",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 1000.0,
+          "max": 1000.0,
+          "mean": 1000.0,
+          "median": 1000.0,
+          "zeros": 0
+        },
+        "purchasing_group": {
+          "dtype": "object",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 22,
+          "top_values": [
+            {
+              "value": "H09",
+              "count": 4549
+            },
+            {
+              "value": "H04",
+              "count": 1671
+            },
+            {
+              "value": "M04",
+              "count": 1653
+            },
+            {
+              "value": "H03",
+              "count": 1144
+            },
+            {
+              "value": "H06",
+              "count": 1139
+            },
+            {
+              "value": "H07",
+              "count": 1130
+            },
+            {
+              "value": "H02",
+              "count": 1125
+            },
+            {
+              "value": "E01",
+              "count": 917
+            },
+            {
+              "value": "E04",
+              "count": 824
+            },
+            {
+              "value": "H08",
+              "count": 765
+            }
+          ]
+        },
+        "supplier": {
+          "dtype": "int64",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 122,
+          "min": 60000010.0,
+          "max": 60004762.0,
+          "mean": 60001591.4853,
+          "median": 60001327.0,
+          "zeros": 0
+        },
+        "manual_supplier_address_id": {
+          "dtype": "float64",
+          "total": 18418,
+          "null_count": 18418,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "supplier_address_id": {
+          "dtype": "float64",
+          "total": 18418,
+          "null_count": 18418,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "supplier_resp_sales_person_name": {
+          "dtype": "object",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 125
+        },
+        "supplier_phone_number": {
+          "dtype": "object",
+          "total": 18418,
+          "null_count": 2,
+          "fill_pct": 100.0,
+          "distinct": 122
+        },
+        "supplying_supplier": {
+          "dtype": "float64",
+          "total": 18418,
+          "null_count": 18418,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "supplying_plant": {
+          "dtype": "float64",
+          "total": 18418,
+          "null_count": 18418,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "invoicing_party": {
+          "dtype": "float64",
+          "total": 18418,
+          "null_count": 18418,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "customer": {
+          "dtype": "float64",
+          "total": 18418,
+          "null_count": 18418,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "correspnc_external_reference": {
+          "dtype": "float64",
+          "total": 18418,
+          "null_count": 261,
+          "fill_pct": 98.6,
+          "distinct": 18157,
+          "min": 4507900254.0,
+          "max": 4508127603.0,
+          "mean": 4508079183.4058,
+          "median": 4508083845.0,
+          "zeros": 0
+        },
+        "correspnc_internal_reference": {
+          "dtype": "float64",
+          "total": 18418,
+          "null_count": 18418,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "purchase_contract": {
+          "dtype": "int64",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 285,
+          "min": 4900000000.0,
+          "max": 4900000301.0,
+          "mean": 4900000160.8817,
+          "median": 4900000156.0,
+          "zeros": 0
+        },
+        "request_for_quotation": {
+          "dtype": "float64",
+          "total": 18418,
+          "null_count": 18418,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "supplier_quotation_external_id": {
+          "dtype": "float64",
+          "total": 18418,
+          "null_count": 18418,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "payment_terms": {
+          "dtype": "object",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 2,
+          "top_values": [
+            {
+              "value": "NT30",
+              "count": 18373
+            },
+            {
+              "value": "NT00",
+              "count": 45
+            }
+          ]
+        },
+        "cash_discount1_days": {
+          "dtype": "int64",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 2,
+          "min": 0.0,
+          "max": 30.0,
+          "mean": 29.9267,
+          "median": 30.0,
+          "zeros": 45
+        },
+        "cash_discount2_days": {
+          "dtype": "int64",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 18418
+        },
+        "net_payment_days": {
+          "dtype": "int64",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 18418
+        },
+        "cash_discount1_percent": {
+          "dtype": "float64",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 18418
+        },
+        "cash_discount2_percent": {
+          "dtype": "float64",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 18418
+        },
+        "down_payment_type": {
+          "dtype": "float64",
+          "total": 18418,
+          "null_count": 18418,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "down_payment_percentage_of_tot_amt": {
+          "dtype": "float64",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 18418
+        },
+        "down_payment_amount": {
+          "dtype": "float64",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 18418
+        },
+        "down_payment_due_date": {
+          "dtype": "object",
+          "total": 18418,
+          "null_count": 18418,
+          "fill_pct": 0.0,
+          "distinct": 0
+        },
+        "incoterms_classification": {
+          "dtype": "object",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 3,
+          "top_values": [
+            {
+              "value": "AMC",
+              "count": 18014
+            },
+            {
+              "value": "VHD",
+              "count": 376
+            },
+            {
+              "value": "VDD",
+              "count": 28
+            }
+          ]
+        },
+        "incoterms_transfer_location": {
+          "dtype": "object",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 4,
+          "top_values": [
+            {
+              "value": "ASMO Managed Carrier",
+              "count": 18014
+            },
+            {
+              "value": "Vendor to Hub Delivery",
+              "count": 376
+            },
+            {
+              "value": "Vendor Direct Delivery",
+              "count": 27
+            },
+            {
+              "value": "VENDOR DIRECT DELIVERY",
+              "count": 1
+            }
+          ]
+        },
+        "incoterms_version": {
+          "dtype": "float64",
+          "total": 18418,
+          "null_count": 18418,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "incoterms_location1": {
+          "dtype": "object",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 4,
+          "top_values": [
+            {
+              "value": "ASMO Managed Carrier",
+              "count": 18014
+            },
+            {
+              "value": "Vendor to Hub Delivery",
+              "count": 376
+            },
+            {
+              "value": "Vendor Direct Delivery",
+              "count": 27
+            },
+            {
+              "value": "VENDOR DIRECT DELIVERY",
+              "count": 1
+            }
+          ]
+        },
+        "incoterms_location2": {
+          "dtype": "float64",
+          "total": 18418,
+          "null_count": 18418,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "is_intrastat_reporting_relevant": {
+          "dtype": "bool",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": 0.0,
+          "zeros": 18418
+        },
+        "is_intrastat_reporting_excluded": {
+          "dtype": "bool",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": 0.0,
+          "zeros": 18418
+        },
+        "purchasing_document_condition": {
+          "dtype": "int64",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 18418,
+          "min": 1000000000.0,
+          "max": 1000018525.0,
+          "mean": 1000009302.4394,
+          "median": 1000009296.5,
+          "zeros": 0
+        },
+        "pricing_procedure": {
+          "dtype": "object",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "top_values": [
+            {
+              "value": "ZASM00",
+              "count": 18418
+            }
+          ]
+        },
+        "document_currency": {
+          "dtype": "object",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 4,
+          "top_values": [
+            {
+              "value": "SAR",
+              "count": 14421
+            },
+            {
+              "value": "USD",
+              "count": 3506
+            },
+            {
+              "value": "EUR",
+              "count": 427
+            },
+            {
+              "value": "GBP",
+              "count": 64
+            }
+          ]
+        },
+        "validity_start_date": {
+          "dtype": "object",
+          "total": 18418,
+          "null_count": 18418,
+          "fill_pct": 0.0,
+          "distinct": 0
+        },
+        "validity_end_date": {
+          "dtype": "object",
+          "total": 18418,
+          "null_count": 18418,
+          "fill_pct": 0.0,
+          "distinct": 0
+        },
+        "exchange_rate_is_fixed": {
+          "dtype": "bool",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": 0.0,
+          "zeros": 18418
+        },
+        "last_change_date_time": {
+          "dtype": "object",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 17191
+        },
+        "is_end_of_purpose_blocked": {
+          "dtype": "bool",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": 0.0,
+          "zeros": 18418
+        },
+        "tax_return_country": {
+          "dtype": "object",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "top_values": [
+            {
+              "value": "SA",
+              "count": 18418
+            }
+          ]
+        },
+        "vat_registration_country": {
+          "dtype": "object",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "top_values": [
+            {
+              "value": "SA",
+              "count": 18418
+            }
+          ]
+        },
+        "purg_reason_for_doc_cancellation": {
+          "dtype": "int64",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 18418
+        },
+        "purg_release_time_total_amount": {
+          "dtype": "object",
+          "total": 18418,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 7433
+        }
+      }
+    },
+    "I_PurchaseOrderItem": {
+      "entity": "I_PurchaseOrderItem",
+      "total_rows": 33664,
+      "total_columns": 160,
+      "profiled_at": "2026-04-14T07:42:09Z",
+      "columns": {
+        "purchase_order": {
+          "dtype": "int64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 18418,
+          "min": 4800000000.0,
+          "max": 4800018417.0,
+          "mean": 4800008371.376,
+          "median": 4800007998.0,
+          "zeros": 0
+        },
+        "purchase_order_item": {
+          "dtype": "int64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 70,
+          "min": 1.0,
+          "max": 70.0,
+          "mean": 3.6974,
+          "median": 1.0,
+          "zeros": 0
+        },
+        "purchase_order_item_unique_id": {
+          "dtype": "int64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 33664,
+          "min": 480000000000001.0,
+          "max": 480001841700005.0,
+          "mean": 480000837137598.8,
+          "median": 480000799800004.5,
+          "zeros": 0
+        },
+        "purchase_order_category": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "top_values": [
+            {
+              "value": "F",
+              "count": 33664
+            }
+          ]
+        },
+        "document_currency": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 4,
+          "top_values": [
+            {
+              "value": "SAR",
+              "count": 26407
+            },
+            {
+              "value": "USD",
+              "count": 6718
+            },
+            {
+              "value": "EUR",
+              "count": 473
+            },
+            {
+              "value": "GBP",
+              "count": 66
+            }
+          ]
+        },
+        "purchasing_document_deletion_code": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 32755,
+          "fill_pct": 2.7,
+          "distinct": 1,
+          "top_values": [
+            {
+              "value": "L",
+              "count": 909
+            }
+          ]
+        },
+        "material_group": {
+          "dtype": "int64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 110,
+          "min": 1300.0,
+          "max": 228000.0,
+          "mean": 127920.0927,
+          "median": 112000.0,
+          "zeros": 0
+        },
+        "material": {
+          "dtype": "int64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 5137,
+          "min": 2000000000.0,
+          "max": 2000136402.0,
+          "mean": 2000013169.3386,
+          "median": 2000009359.0,
+          "zeros": 0
+        },
+        "material_type": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "top_values": [
+            {
+              "value": "9CAT",
+              "count": 33664
+            }
+          ]
+        },
+        "supplier_material_number": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "supplier_subrange": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "top_values": [
+            {
+              "value": "ARAMCO",
+              "count": 33664
+            }
+          ]
+        },
+        "manufacturer_part_nmbr": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 14,
+          "fill_pct": 100.0,
+          "distinct": 4252
+        },
+        "manufacturer": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 14,
+          "fill_pct": 100.0,
+          "distinct": 828,
+          "min": 60000014.0,
+          "max": 70000638.0,
+          "mean": 60833463.3381,
+          "median": 60001092.0,
+          "zeros": 0
+        },
+        "manufacturer_material": {
+          "dtype": "int64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 5142,
+          "min": 2000006155.0,
+          "max": 4000547857.0,
+          "mean": 3999203016.3795,
+          "median": 4000020880.0,
+          "zeros": 0
+        },
+        "purchase_order_item_text": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 4258
+        },
+        "product_type": {
+          "dtype": "int64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0,
+          "zeros": 0
+        },
+        "company_code": {
+          "dtype": "int64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 1000.0,
+          "max": 1000.0,
+          "mean": 1000.0,
+          "median": 1000.0,
+          "zeros": 0
+        },
+        "plant": {
+          "dtype": "int64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 2001.0,
+          "max": 2001.0,
+          "mean": 2001.0,
+          "median": 2001.0,
+          "zeros": 0
+        },
+        "manual_delivery_address_id": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0
+        },
+        "reference_delivery_address_id": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 126,
+          "fill_pct": 99.6,
+          "distinct": 997
+        },
+        "customer": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "subcontractor": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "supplier_is_subcontractor": {
+          "dtype": "bool",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": 0.0,
+          "zeros": 33664
+        },
+        "cross_plant_configurable_product": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "article_category": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "plnd_order_replnmt_elmnt_type": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "product_purchase_points_qty_unit": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "product_purchase_points_qty": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 33664
+        },
+        "storage_location": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "purchase_order_quantity_unit": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 25,
+          "top_values": [
+            {
+              "value": "EA",
+              "count": 28224
+            },
+            {
+              "value": "PAA",
+              "count": 2598
+            },
+            {
+              "value": "ROL",
+              "count": 636
+            },
+            {
+              "value": "SET",
+              "count": 390
+            },
+            {
+              "value": "KIT",
+              "count": 369
+            },
+            {
+              "value": "PK",
+              "count": 277
+            },
+            {
+              "value": "BX",
+              "count": 230
+            },
+            {
+              "value": "TU",
+              "count": 222
+            },
+            {
+              "value": "CAN",
+              "count": 183
+            },
+            {
+              "value": "PC",
+              "count": 174
+            }
+          ]
+        },
+        "order_item_qty_to_base_qty_nmrtr": {
+          "dtype": "int64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 3,
+          "min": 1.0,
+          "max": 100.0,
+          "mean": 1.2294,
+          "median": 1.0,
+          "zeros": 0
+        },
+        "order_item_qty_to_base_qty_dnmntr": {
+          "dtype": "int64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0,
+          "zeros": 0
+        },
+        "net_price_quantity": {
+          "dtype": "int64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0,
+          "zeros": 0
+        },
+        "is_completely_delivered": {
+          "dtype": "bool",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 2,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": 0.0,
+          "zeros": 22857
+        },
+        "is_finally_invoiced": {
+          "dtype": "bool",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 2,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": 0.0,
+          "zeros": 28353
+        },
+        "goods_receipt_is_expected": {
+          "dtype": "bool",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": 1.0,
+          "zeros": 0
+        },
+        "outward_delivery_is_complete": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "top_values": [
+            {
+              "value": "False",
+              "count": 33664
+            }
+          ]
+        },
+        "invoice_is_expected": {
+          "dtype": "bool",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": 1.0,
+          "zeros": 0
+        },
+        "invoice_is_goods_receipt_based": {
+          "dtype": "bool",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": 1.0,
+          "zeros": 0
+        },
+        "purchase_contract_item": {
+          "dtype": "int64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1008,
+          "min": 1.0,
+          "max": 2141.0,
+          "mean": 118.0358,
+          "median": 28.0,
+          "zeros": 0
+        },
+        "purchase_contract": {
+          "dtype": "int64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 285,
+          "min": 4900000000.0,
+          "max": 4900000301.0,
+          "mean": 4900000150.2251,
+          "median": 4900000154.0,
+          "zeros": 0
+        },
+        "purchase_requisition": {
+          "dtype": "int64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 16288,
+          "min": 3100000000.0,
+          "max": 3100016361.0,
+          "mean": 3100007595.0862,
+          "median": 3100007262.0,
+          "zeros": 0
+        },
+        "requirement_tracking": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 27932,
+          "fill_pct": 17.0,
+          "distinct": 2761,
+          "min": 9026897.0,
+          "max": 4006809239.0,
+          "mean": 55911716.3374,
+          "median": 57211342.0,
+          "zeros": 0
+        },
+        "is_order_ackn_rqd": {
+          "dtype": "bool",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 2,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": 0.0,
+          "zeros": 33653
+        },
+        "purchase_requisition_item": {
+          "dtype": "int64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 174,
+          "min": 1.0,
+          "max": 290.0,
+          "mean": 12.7325,
+          "median": 8.0,
+          "zeros": 0
+        },
+        "request_for_quotation": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "request_for_quotation_item": {
+          "dtype": "int64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 33664
+        },
+        "supplier_quotation": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "supplier_quotation_item": {
+          "dtype": "int64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 33664
+        },
+        "evald_rcpt_settlmt_is_allowed": {
+          "dtype": "bool",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": 0.0,
+          "zeros": 33664
+        },
+        "unlimited_overdelivery_is_allowed": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "top_values": [
+            {
+              "value": "False",
+              "count": 33664
+            }
+          ]
+        },
+        "overdeliv_tolrtd_lmt_ratio_in_pct": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 2,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.0001,
+          "median": 0.0,
+          "zeros": 33661
+        },
+        "underdeliv_tolrtd_lmt_ratio_in_pct": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 2,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.0001,
+          "median": 0.0,
+          "zeros": 33661
+        },
+        "requisitioner_name": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 633,
+          "fill_pct": 98.1,
+          "distinct": 1796
+        },
+        "mrp_area": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "creation_time": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 8208
+        },
+        "creation_date": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 211
+        },
+        "planned_delivery_duration_in_days": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 63
+        },
+        "goods_receipt_duration_in_days": {
+          "dtype": "int64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 2,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.0069,
+          "median": 0.0,
+          "zeros": 33431
+        },
+        "partial_delivery_is_allowed": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0
+        },
+        "consumption_posting": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "top_values": [
+            {
+              "value": "V",
+              "count": 33664
+            }
+          ]
+        },
+        "service_performer": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "service_package": {
+          "dtype": "int64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 33664
+        },
+        "base_unit": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 25,
+          "top_values": [
+            {
+              "value": "EA",
+              "count": 28356
+            },
+            {
+              "value": "PAA",
+              "count": 2598
+            },
+            {
+              "value": "ROL",
+              "count": 636
+            },
+            {
+              "value": "SET",
+              "count": 390
+            },
+            {
+              "value": "KIT",
+              "count": 376
+            },
+            {
+              "value": "PK",
+              "count": 258
+            },
+            {
+              "value": "TU",
+              "count": 222
+            },
+            {
+              "value": "CAN",
+              "count": 183
+            },
+            {
+              "value": "PC",
+              "count": 174
+            },
+            {
+              "value": "BX",
+              "count": 150
+            }
+          ]
+        },
+        "purchase_order_item_category": {
+          "dtype": "int64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 33664
+        },
+        "profit_center": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "top_values": [
+            {
+              "value": "ZASMOPCR",
+              "count": 33664
+            }
+          ]
+        },
+        "order_price_unit": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 25,
+          "top_values": [
+            {
+              "value": "EA",
+              "count": 28224
+            },
+            {
+              "value": "PAA",
+              "count": 2598
+            },
+            {
+              "value": "ROL",
+              "count": 636
+            },
+            {
+              "value": "SET",
+              "count": 390
+            },
+            {
+              "value": "KIT",
+              "count": 369
+            },
+            {
+              "value": "PK",
+              "count": 277
+            },
+            {
+              "value": "BX",
+              "count": 230
+            },
+            {
+              "value": "TU",
+              "count": 222
+            },
+            {
+              "value": "CAN",
+              "count": 183
+            },
+            {
+              "value": "PC",
+              "count": 174
+            }
+          ]
+        },
+        "item_volume_unit": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "item_weight_unit": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "top_values": [
+            {
+              "value": "KG",
+              "count": 33664
+            }
+          ]
+        },
+        "multiple_acct_assgmt_distribution": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "partial_invoice_distribution": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "pricing_date_control": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0
+        },
+        "is_statistical_item": {
+          "dtype": "bool",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 2,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": 0.0,
+          "zeros": 32755
+        },
+        "purchasing_parent_item": {
+          "dtype": "int64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 33664
+        },
+        "goods_receipt_latest_creation_date": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0
+        },
+        "is_returns_item": {
+          "dtype": "bool",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": 0.0,
+          "zeros": 33664
+        },
+        "purchasing_order_reason": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "incoterms_classification": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 3,
+          "top_values": [
+            {
+              "value": "AMC",
+              "count": 33093
+            },
+            {
+              "value": "VHD",
+              "count": 544
+            },
+            {
+              "value": "VDD",
+              "count": 27
+            }
+          ]
+        },
+        "incoterms_transfer_location": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 3,
+          "top_values": [
+            {
+              "value": "ASMO Managed Carrier",
+              "count": 33093
+            },
+            {
+              "value": "Vendor to Hub Delivery",
+              "count": 544
+            },
+            {
+              "value": "Vendor Direct Delivery",
+              "count": 27
+            }
+          ]
+        },
+        "incoterms_location1": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 3,
+          "top_values": [
+            {
+              "value": "ASMO Managed Carrier",
+              "count": 33093
+            },
+            {
+              "value": "Vendor to Hub Delivery",
+              "count": 544
+            },
+            {
+              "value": "Vendor Direct Delivery",
+              "count": 27
+            }
+          ]
+        },
+        "incoterms_location2": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "prior_supplier": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "international_article_number": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "intrastat_service_code": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "commodity_code": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "material_freight_group": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "discount_in_kind_eligibility": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "purg_item_is_blocked_for_delivery": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "top_values": [
+            {
+              "value": "False",
+              "count": 33664
+            }
+          ]
+        },
+        "supplier_confirmation_control_key": {
+          "dtype": "int64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0,
+          "zeros": 0
+        },
+        "price_is_to_be_printed": {
+          "dtype": "bool",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": 1.0,
+          "zeros": 0
+        },
+        "account_assignment_category": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 4,
+          "top_values": [
+            {
+              "value": "K",
+              "count": 20095
+            },
+            {
+              "value": "Y",
+              "count": 7874
+            },
+            {
+              "value": "F",
+              "count": 5100
+            },
+            {
+              "value": "P",
+              "count": 595
+            }
+          ]
+        },
+        "purchasing_info_record": {
+          "dtype": "int64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 5576,
+          "min": 5300000000.0,
+          "max": 5300005633.0,
+          "mean": 5300001745.3727,
+          "median": 5300001560.0,
+          "zeros": 0
+        },
+        "net_amount": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 8275,
+          "min": 0.4,
+          "max": 1475684.0,
+          "mean": 3164.4764,
+          "median": 425.325,
+          "zeros": 0
+        },
+        "gross_amount": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 8226,
+          "min": 0.4,
+          "max": 1475684.0,
+          "mean": 3164.7692,
+          "median": 425.94,
+          "zeros": 0
+        },
+        "effective_amount": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 8275,
+          "min": 0.4,
+          "max": 1475684.0,
+          "mean": 3164.4764,
+          "median": 425.325,
+          "zeros": 0
+        },
+        "subtotal1_amount": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 33664
+        },
+        "subtotal2_amount": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 33664
+        },
+        "subtotal3_amount": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 33664
+        },
+        "subtotal4_amount": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 33664
+        },
+        "subtotal5_amount": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 33664
+        },
+        "subtotal6_amount": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 33664
+        },
+        "order_quantity": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 389,
+          "min": 0.1,
+          "max": 165932.0,
+          "mean": 69.2138,
+          "median": 5.0,
+          "zeros": 0
+        },
+        "net_price_amount": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 3373,
+          "min": 0.27,
+          "max": 148863.8,
+          "mean": 598.3424,
+          "median": 103.51,
+          "zeros": 0
+        },
+        "item_volume": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 33664
+        },
+        "item_gross_weight": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 405,
+          "min": 0.0,
+          "max": 3182.0,
+          "mean": 0.945,
+          "median": 0.0,
+          "zeros": 28392
+        },
+        "item_net_weight": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 405,
+          "min": 0.0,
+          "max": 3182.0,
+          "mean": 0.945,
+          "median": 0.0,
+          "zeros": 28392
+        },
+        "order_price_unit_to_order_unit_nmrtr": {
+          "dtype": "int64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0,
+          "zeros": 0
+        },
+        "ord_price_unit_to_order_unit_dnmntr": {
+          "dtype": "int64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0,
+          "zeros": 0
+        },
+        "goods_receipt_is_non_valuated": {
+          "dtype": "bool",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": 0.0,
+          "zeros": 33664
+        },
+        "tax_code": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 11,
+          "fill_pct": 100.0,
+          "distinct": 2,
+          "top_values": [
+            {
+              "value": "V5",
+              "count": 33652
+            },
+            {
+              "value": "V1",
+              "count": 1
+            }
+          ]
+        },
+        "tax_jurisdiction": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "shipping_instruction": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "non_deductible_input_tax_amount": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 33664
+        },
+        "stock_type": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "valuation_type": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "valuation_category": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "item_is_rejected_by_supplier": {
+          "dtype": "bool",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": 0.0,
+          "zeros": 33664
+        },
+        "purg_doc_price_date": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 212
+        },
+        "is_info_record_updated": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "top_values": [
+            {
+              "value": "C",
+              "count": 33664
+            }
+          ]
+        },
+        "purg_doc_release_order_quantity": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 33664
+        },
+        "purg_doc_order_ackn_number": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 19469,
+          "fill_pct": 42.2,
+          "distinct": 7578
+        },
+        "cost_center": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "gl_account": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "wbs_element_internal_id": {
+          "dtype": "int64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 33664
+        },
+        "fund": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "budget_period": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "funds_center": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "commitment_item": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "commitment_item_short_id": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "functional_area": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "grant_id": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "earmarked_funds": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "earmarked_funds_document": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "earmarked_funds_item": {
+          "dtype": "int64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 33664
+        },
+        "earmarked_funds_document_item": {
+          "dtype": "int64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 33664
+        },
+        "inventory_special_stock_type": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "delivery_document_type": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0
+        },
+        "issuing_storage_location": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "allocation_table": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "allocation_table_item": {
+          "dtype": "int64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 33664
+        },
+        "purg_configurable_item_number": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "retail_promotion": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "down_payment_type": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "down_payment_percentage_of_tot_amt": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 33664
+        },
+        "down_payment_amount": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 33664
+        },
+        "down_payment_due_date": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0
+        },
+        "expected_overall_limit_amount": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 33664
+        },
+        "overall_limit_amount": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 33664
+        },
+        "pur_contract_for_overall_limit": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "requirement_segment": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "br_material_origin": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "br_material_usage": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "br_cfop_category": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "br_ncm": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "consumption_tax_ctrl_code": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "br_is_produced_in_house": {
+          "dtype": "bool",
+          "total": 33664,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": 0.0,
+          "zeros": 33664
+        },
+        "third_pty_ord_procg_ext_reference": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "third_pty_ord_procg_ext_ref_item": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "purg_doc_aggrgd_subitem_category": {
+          "dtype": "float64",
+          "total": 33664,
+          "null_count": 33664,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "stock_segment": {
+          "dtype": "object",
+          "total": 33664,
+          "null_count": 2,
+          "fill_pct": 100.0,
+          "distinct": 158
+        }
+      }
+    },
+    "C_PurchaseOrderGoodsReceipt": {
+      "entity": "C_PurchaseOrderGoodsReceipt",
+      "total_rows": 11049,
+      "total_columns": 106,
+      "profiled_at": "2026-04-14T07:42:47Z",
+      "columns": {
+        "material_document": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 11045,
+          "min": 5000000010.0,
+          "max": 5000011055.0,
+          "mean": 5000005530.8018,
+          "median": 5000005531.0,
+          "zeros": 0
+        },
+        "material_document_item": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 4,
+          "min": 1.0,
+          "max": 4.0,
+          "mean": 1.0006,
+          "median": 1.0,
+          "zeros": 0
+        },
+        "material_document_year": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 2,
+          "min": 2025.0,
+          "max": 2026.0,
+          "mean": 2025.848,
+          "median": 2026.0,
+          "zeros": 0
+        },
+        "purchase_order": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 4594,
+          "min": 4800000000.0,
+          "max": 4800016037.0,
+          "mean": 4800004483.7865,
+          "median": 4800003727.0,
+          "zeros": 0
+        },
+        "purchase_order_item": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 64,
+          "min": 1.0,
+          "max": 64.0,
+          "mean": 4.3701,
+          "median": 2.0,
+          "zeros": 0
+        },
+        "material": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1236,
+          "min": 2000000000.0,
+          "max": 2000032663.0,
+          "mean": 2000007640.9825,
+          "median": 2000007595.0,
+          "zeros": 0
+        },
+        "quantity_in_base_unit": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 151,
+          "min": 0.25,
+          "max": 20000.0,
+          "mean": 43.7163,
+          "median": 4.0,
+          "zeros": 0
+        },
+        "quantity_in_entry_unit": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 146,
+          "min": 0.25,
+          "max": 10000.0,
+          "mean": 30.3324,
+          "median": 4.0,
+          "zeros": 0
+        },
+        "goods_receipt_qty_in_order_unit": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 146,
+          "min": 0.25,
+          "max": 10000.0,
+          "mean": 30.3324,
+          "median": 4.0,
+          "zeros": 0
+        },
+        "qty_in_purchase_order_price_unit": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 146,
+          "min": 0.25,
+          "max": 10000.0,
+          "mean": 30.3324,
+          "median": 4.0,
+          "zeros": 0
+        },
+        "plant": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 2001.0,
+          "max": 2001.0,
+          "mean": 2001.0,
+          "median": 2001.0,
+          "zeros": 0
+        },
+        "storage_location": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 11049,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "goods_movement_is_cancelled": {
+          "dtype": "bool",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": 0.0,
+          "zeros": 11049
+        },
+        "goods_movement_cancellation_type": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 11049,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "goods_movement_ref_doc_type": {
+          "dtype": "object",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "top_values": [
+            {
+              "value": "B",
+              "count": 11049
+            }
+          ]
+        },
+        "goods_movement_type": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 101.0,
+          "max": 101.0,
+          "mean": 101.0,
+          "median": 101.0,
+          "zeros": 0
+        },
+        "stock_identifying_material": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1236,
+          "min": 2000000000.0,
+          "max": 2000032663.0,
+          "mean": 2000007640.9825,
+          "median": 2000007595.0,
+          "zeros": 0
+        },
+        "stock_idfg_storage_location": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 11049,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "stock_identifying_batch": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 11049,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "special_stock_idfg_supplier": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 11049,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "special_stock_idfg_customer": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 11049,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "inventory_special_stock_type": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 11049,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "inventory_stock_type": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 11049,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "batch": {
+          "dtype": "object",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 137
+        },
+        "supplier": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 74,
+          "min": 60000010.0,
+          "max": 60003452.0,
+          "mean": 60000831.4676,
+          "median": 60001271.0,
+          "zeros": 0
+        },
+        "sales_order": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 11049,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "sales_order_item": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 11049
+        },
+        "sales_order_schedule_line": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 11049
+        },
+        "customer": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 11049,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "stock_owner": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 11049,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "wbs_element_internal_id": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 11049
+        },
+        "issg_or_rcvg_material": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 11049,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "issuing_or_receiving_plant": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 11049,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "issuing_or_receiving_storage_loc": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 11049,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "issg_or_rcvg_batch": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 11049,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "issg_or_rcvg_spcl_stock_ind": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 11049,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "issuing_or_receiving_val_type": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 11049,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "consumption_posting": {
+          "dtype": "object",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "top_values": [
+            {
+              "value": "V",
+              "count": 11049
+            }
+          ]
+        },
+        "goods_movement_reason_code": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 11049
+        },
+        "debit_credit_code": {
+          "dtype": "object",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "top_values": [
+            {
+              "value": "S",
+              "count": 11049
+            }
+          ]
+        },
+        "material_base_unit": {
+          "dtype": "object",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 20,
+          "top_values": [
+            {
+              "value": "EA",
+              "count": 9654
+            },
+            {
+              "value": "PAA",
+              "count": 377
+            },
+            {
+              "value": "ROL",
+              "count": 235
+            },
+            {
+              "value": "TU",
+              "count": 165
+            },
+            {
+              "value": "KIT",
+              "count": 145
+            },
+            {
+              "value": "PC",
+              "count": 94
+            },
+            {
+              "value": "SET",
+              "count": 93
+            },
+            {
+              "value": "CAN",
+              "count": 82
+            },
+            {
+              "value": "BX",
+              "count": 54
+            },
+            {
+              "value": "BAG",
+              "count": 36
+            }
+          ]
+        },
+        "document_date": {
+          "dtype": "object",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 180
+        },
+        "accounting_document_type": {
+          "dtype": "object",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "top_values": [
+            {
+              "value": "WE",
+              "count": 11049
+            }
+          ]
+        },
+        "inventory_transaction_type": {
+          "dtype": "object",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "top_values": [
+            {
+              "value": "WE",
+              "count": 11049
+            }
+          ]
+        },
+        "inventory_special_stock_valn_type": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 11049,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "creation_date": {
+          "dtype": "object",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 170
+        },
+        "creation_time": {
+          "dtype": "object",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 6734
+        },
+        "created_by_user": {
+          "dtype": "object",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "top_values": [
+            {
+              "value": "RFCS4P100API",
+              "count": 11049
+            }
+          ]
+        },
+        "bill_of_lading": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 11049,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "shelf_life_expiration_date": {
+          "dtype": "object",
+          "total": 11049,
+          "null_count": 11049,
+          "fill_pct": 0.0,
+          "distinct": 0
+        },
+        "manufacture_date": {
+          "dtype": "object",
+          "total": 11049,
+          "null_count": 11049,
+          "fill_pct": 0.0,
+          "distinct": 0
+        },
+        "entry_unit": {
+          "dtype": "object",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 20,
+          "top_values": [
+            {
+              "value": "EA",
+              "count": 9603
+            },
+            {
+              "value": "PAA",
+              "count": 377
+            },
+            {
+              "value": "ROL",
+              "count": 235
+            },
+            {
+              "value": "TU",
+              "count": 165
+            },
+            {
+              "value": "KIT",
+              "count": 145
+            },
+            {
+              "value": "PC",
+              "count": 94
+            },
+            {
+              "value": "SET",
+              "count": 93
+            },
+            {
+              "value": "CAN",
+              "count": 82
+            },
+            {
+              "value": "BX",
+              "count": 70
+            },
+            {
+              "value": "PAC",
+              "count": 48
+            }
+          ]
+        },
+        "inventory_valuation_type": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 11049,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "project_network": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 11049,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "manufacturing_order": {
+          "dtype": "object",
+          "total": 11049,
+          "null_count": 10342,
+          "fill_pct": 6.4,
+          "distinct": 1,
+          "top_values": [
+            {
+              "value": "YASMOIO",
+              "count": 707
+            }
+          ]
+        },
+        "manufacturing_order_item": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 11049
+        },
+        "reservation": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 11049
+        },
+        "reservation_item": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 11049
+        },
+        "reservation_is_finally_issued": {
+          "dtype": "bool",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": 1.0,
+          "zeros": 0
+        },
+        "delivery_document": {
+          "dtype": "object",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 6103
+        },
+        "delivery_document_item": {
+          "dtype": "object",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 37,
+          "top_values": [
+            {
+              "value": "000010",
+              "count": 6090
+            },
+            {
+              "value": "000020",
+              "count": 1415
+            },
+            {
+              "value": "000030",
+              "count": 936
+            },
+            {
+              "value": "000040",
+              "count": 697
+            },
+            {
+              "value": "000050",
+              "count": 518
+            },
+            {
+              "value": "000060",
+              "count": 370
+            },
+            {
+              "value": "000070",
+              "count": 270
+            },
+            {
+              "value": "000080",
+              "count": 204
+            },
+            {
+              "value": "000090",
+              "count": 155
+            },
+            {
+              "value": "000100",
+              "count": 105
+            }
+          ]
+        },
+        "is_completely_delivered": {
+          "dtype": "bool",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 2,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": 1.0,
+          "zeros": 242
+        },
+        "reversed_material_document_year": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 11049
+        },
+        "reversed_material_document": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 11049,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "reversed_material_document_item": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 11049
+        },
+        "rvsl_of_goods_receipt_is_allowed": {
+          "dtype": "bool",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": 0.0,
+          "zeros": 11049
+        },
+        "is_reversal_movement_type": {
+          "dtype": "bool",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": 0.0,
+          "zeros": 11049
+        },
+        "goods_recipient_name": {
+          "dtype": "object",
+          "total": 11049,
+          "null_count": 1242,
+          "fill_pct": 88.8,
+          "distinct": 1426
+        },
+        "unloading_point_name": {
+          "dtype": "object",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 731
+        },
+        "cost_center": {
+          "dtype": "object",
+          "total": 11049,
+          "null_count": 974,
+          "fill_pct": 91.2,
+          "distinct": 1,
+          "top_values": [
+            {
+              "value": "YASMOCCR",
+              "count": 10075
+            }
+          ]
+        },
+        "gl_account": {
+          "dtype": "object",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "top_values": [
+            {
+              "value": "Z41600",
+              "count": 11049
+            }
+          ]
+        },
+        "cost_object": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 11049,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "profit_center": {
+          "dtype": "object",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "top_values": [
+            {
+              "value": "ZASMOPCR",
+              "count": 11049
+            }
+          ]
+        },
+        "cost_estimate": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 11049
+        },
+        "reference_document": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 6103,
+          "min": 180005200.0,
+          "max": 18000251100001.0,
+          "mean": 1798578162697.981,
+          "median": 1800042380001.0,
+          "zeros": 0
+        },
+        "service_performer": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 11049,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "employment_internal_id": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 11049
+        },
+        "person_work_agreement": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 11049
+        },
+        "account_assignment_category": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 11049,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "work_item": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 11049,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "services_rendered_date": {
+          "dtype": "object",
+          "total": 11049,
+          "null_count": 11049,
+          "fill_pct": 0.0,
+          "distinct": 0
+        },
+        "company_code": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 1000.0,
+          "max": 1000.0,
+          "mean": 1000.0,
+          "median": 1000.0,
+          "zeros": 0
+        },
+        "business_area": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 11049,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "controlling_area": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 1000.0,
+          "max": 1000.0,
+          "mean": 1000.0,
+          "median": 1000.0,
+          "zeros": 0
+        },
+        "functional_area": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 11049,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "posting_date": {
+          "dtype": "object",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 180
+        },
+        "fiscal_year_period": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 10,
+          "min": 2025007.0,
+          "max": 2026004.0,
+          "mean": 2025852.0733,
+          "median": 2026003.0,
+          "zeros": 0
+        },
+        "fiscal_year_variant": {
+          "dtype": "object",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "top_values": [
+            {
+              "value": "K4",
+              "count": 11049
+            }
+          ]
+        },
+        "year_day": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 180,
+          "min": 2025211.0,
+          "max": 2026104.0,
+          "mean": 2025956.1483,
+          "median": 2026063.0,
+          "zeros": 0
+        },
+        "year_week": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 38,
+          "min": 202531.0,
+          "max": 202616.0,
+          "mean": 202601.9562,
+          "median": 202610.0,
+          "zeros": 0
+        },
+        "year_month": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 10,
+          "min": 202507.0,
+          "max": 202604.0,
+          "mean": 202588.9183,
+          "median": 202603.0,
+          "zeros": 0
+        },
+        "year_quarter": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 4,
+          "min": 20253.0,
+          "max": 20262.0,
+          "mean": 20260.1729,
+          "median": 20261.0,
+          "zeros": 0
+        },
+        "calendar_quarter": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 4,
+          "min": 1.0,
+          "max": 4.0,
+          "mean": 1.6934,
+          "median": 1.0,
+          "zeros": 0
+        },
+        "calendar_month": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 10,
+          "min": 1.0,
+          "max": 12.0,
+          "mean": 4.1233,
+          "median": 3.0,
+          "zeros": 0
+        },
+        "calendar_week": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 38,
+          "min": 1.0,
+          "max": 52.0,
+          "mean": 15.4778,
+          "median": 12.0,
+          "zeros": 0
+        },
+        "calendar_day": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 180,
+          "min": 1.0,
+          "max": 365.0,
+          "mean": 108.1983,
+          "median": 77.0,
+          "zeros": 0
+        },
+        "week_day": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 7,
+          "min": 1.0,
+          "max": 7.0,
+          "mean": 3.5742,
+          "median": 3.0,
+          "zeros": 0
+        },
+        "fiscal_year": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 2,
+          "min": 2025.0,
+          "max": 2026.0,
+          "mean": 2025.848,
+          "median": 2026.0,
+          "zeros": 0
+        },
+        "year_period": {
+          "dtype": "int64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 10,
+          "min": 2025007.0,
+          "max": 2026004.0,
+          "mean": 2025853.8657,
+          "median": 2026003.0,
+          "zeros": 0
+        },
+        "total_goods_mvt_amt_in_cc_crcy": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 2348,
+          "min": 0.55,
+          "max": 458208.0,
+          "mean": 2322.9692,
+          "median": 445.46,
+          "zeros": 0
+        },
+        "goods_movement_stk_amt_in_cc_crcy": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 11049
+        },
+        "goods_mvt_cnsmpn_amt_in_cc_crcy": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 2348,
+          "min": 0.55,
+          "max": 458208.0,
+          "mean": 2322.9692,
+          "median": 445.46,
+          "zeros": 0
+        },
+        "company_code_currency": {
+          "dtype": "object",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "top_values": [
+            {
+              "value": "SAR",
+              "count": 11049
+            }
+          ]
+        },
+        "gds_mvt_ext_amt_in_co_code_crcy": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 11049
+        },
+        "sls_prc_amt_incl_vat_in_co_code_crcy": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 11049
+        },
+        "entered_sls_amt_in_co_code_crcy": {
+          "dtype": "float64",
+          "total": 11049,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "zeros": 11049
+        }
+      }
+    },
+    "C_PurOrdSuplrConfDisplay": {
+      "entity": "C_PurOrdSuplrConfDisplay",
+      "total_rows": 47412,
+      "total_columns": 11,
+      "profiled_at": "2026-04-14T07:43:51Z",
+      "columns": {
+        "purchase_order": {
+          "dtype": "int64",
+          "total": 47412,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 16321,
+          "min": 4800000000.0,
+          "max": 4800018410.0,
+          "mean": 4800006895.7787,
+          "median": 4800006067.0,
+          "zeros": 0
+        },
+        "purchase_order_item": {
+          "dtype": "int64",
+          "total": 47412,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 70,
+          "min": 1.0,
+          "max": 70.0,
+          "mean": 4.0516,
+          "median": 2.0,
+          "zeros": 0
+        },
+        "sequential_nmbr_of_suplr_conf": {
+          "dtype": "int64",
+          "total": 47412,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 13,
+          "min": 1.0,
+          "max": 13.0,
+          "mean": 1.4141,
+          "median": 1.0,
+          "zeros": 0
+        },
+        "supplier_confirmation_category": {
+          "dtype": "object",
+          "total": 47412,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 2,
+          "top_values": [
+            {
+              "value": "AB",
+              "count": 30535
+            },
+            {
+              "value": "LA",
+              "count": 16877
+            }
+          ]
+        },
+        "delivery_date": {
+          "dtype": "object",
+          "total": 47412,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 462
+        },
+        "delivery_time": {
+          "dtype": "object",
+          "total": 47412,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 87
+        },
+        "confirmed_quantity": {
+          "dtype": "float64",
+          "total": 47412,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 368,
+          "min": 0.0,
+          "max": 165932.0,
+          "mean": 54.3211,
+          "median": 4.0,
+          "zeros": 1302
+        },
+        "performance_period_start_date": {
+          "dtype": "object",
+          "total": 47412,
+          "null_count": 47412,
+          "fill_pct": 0.0,
+          "distinct": 0
+        },
+        "performance_period_end_date": {
+          "dtype": "object",
+          "total": 47412,
+          "null_count": 47412,
+          "fill_pct": 0.0,
+          "distinct": 0
+        },
+        "service_performer": {
+          "dtype": "float64",
+          "total": 47412,
+          "null_count": 47412,
+          "fill_pct": 0.0,
+          "distinct": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "zeros": 0
+        },
+        "purchase_order_quantity_unit": {
+          "dtype": "object",
+          "total": 47412,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 24,
+          "top_values": [
+            {
+              "value": "EA",
+              "count": 40036
+            },
+            {
+              "value": "PAA",
+              "count": 3286
+            },
+            {
+              "value": "ROL",
+              "count": 874
+            },
+            {
+              "value": "KIT",
+              "count": 531
+            },
+            {
+              "value": "SET",
+              "count": 511
+            },
+            {
+              "value": "TU",
+              "count": 428
+            },
+            {
+              "value": "PK",
+              "count": 323
+            },
+            {
+              "value": "BX",
+              "count": 312
+            },
+            {
+              "value": "CAN",
+              "count": 295
+            },
+            {
+              "value": "PC",
+              "count": 271
+            }
+          ]
+        }
+      }
+    },
+    "C_PurReqItemByPurOrder": {
+      "entity": "C_PurReqItemByPurOrder",
+      "total_rows": 69464,
+      "total_columns": 19,
+      "profiled_at": "2026-04-14T07:45:22Z",
+      "columns": {
+        "purchase_requisition": {
+          "dtype": "int64",
+          "total": 69464,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 16345,
+          "min": 3100000000.0,
+          "max": 3100016361.0,
+          "mean": 3100006653.1954,
+          "median": 3100005904.5,
+          "zeros": 0
+        },
+        "purchase_requisition_item": {
+          "dtype": "int64",
+          "total": 69464,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 174,
+          "min": 1.0,
+          "max": 290.0,
+          "mean": 19.9943,
+          "median": 10.0,
+          "zeros": 0
+        },
+        "purchase_order": {
+          "dtype": "float64",
+          "total": 69464,
+          "null_count": 70,
+          "fill_pct": 99.9,
+          "distinct": 18418,
+          "min": 4800000000.0,
+          "max": 4800018417.0,
+          "mean": 4800007408.3071,
+          "median": 4800006386.0,
+          "zeros": 0
+        },
+        "purchase_requisition_type": {
+          "dtype": "object",
+          "total": 69464,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "top_values": [
+            {
+              "value": "ZPR",
+              "count": 69464
+            }
+          ]
+        },
+        "plant": {
+          "dtype": "int64",
+          "total": 69464,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 1,
+          "min": 2001.0,
+          "max": 2001.0,
+          "mean": 2001.0,
+          "median": 2001.0,
+          "zeros": 0
+        },
+        "purchasing_organization": {
+          "dtype": "float64",
+          "total": 69464,
+          "null_count": 67,
+          "fill_pct": 99.9,
+          "distinct": 1,
+          "min": 1000.0,
+          "max": 1000.0,
+          "mean": 1000.0,
+          "median": 1000.0,
+          "zeros": 0
+        },
+        "purchasing_group": {
+          "dtype": "object",
+          "total": 69464,
+          "null_count": 12,
+          "fill_pct": 100.0,
+          "distinct": 22,
+          "top_values": [
+            {
+              "value": "H09",
+              "count": 26511
+            },
+            {
+              "value": "H04",
+              "count": 14146
+            },
+            {
+              "value": "H07",
+              "count": 10569
+            },
+            {
+              "value": "M04",
+              "count": 2319
+            },
+            {
+              "value": "H02",
+              "count": 2183
+            },
+            {
+              "value": "H08",
+              "count": 2072
+            },
+            {
+              "value": "H03",
+              "count": 1696
+            },
+            {
+              "value": "H06",
+              "count": 1490
+            },
+            {
+              "value": "E01",
+              "count": 1210
+            },
+            {
+              "value": "H10",
+              "count": 1140
+            }
+          ]
+        },
+        "purchase_requisition_item_text": {
+          "dtype": "object",
+          "total": 69464,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 4391
+        },
+        "material_group": {
+          "dtype": "int64",
+          "total": 69464,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 110,
+          "min": 1300.0,
+          "max": 228000.0,
+          "mean": 134301.7462,
+          "median": 120000.0,
+          "zeros": 0
+        },
+        "material_group_text": {
+          "dtype": "object",
+          "total": 69464,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 110
+        },
+        "delivery_date": {
+          "dtype": "object",
+          "total": 69464,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 438
+        },
+        "requested_quantity": {
+          "dtype": "float64",
+          "total": 69464,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 399,
+          "min": 0.001,
+          "max": 165932.0,
+          "mean": 65.0139,
+          "median": 5.0,
+          "zeros": 0
+        },
+        "base_unit": {
+          "dtype": "object",
+          "total": 69464,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 25,
+          "top_values": [
+            {
+              "value": "EA",
+              "count": 58553
+            },
+            {
+              "value": "PAA",
+              "count": 6194
+            },
+            {
+              "value": "SET",
+              "count": 1185
+            },
+            {
+              "value": "ROL",
+              "count": 1074
+            },
+            {
+              "value": "PK",
+              "count": 516
+            },
+            {
+              "value": "KIT",
+              "count": 456
+            },
+            {
+              "value": "TU",
+              "count": 264
+            },
+            {
+              "value": "BX",
+              "count": 254
+            },
+            {
+              "value": "PC",
+              "count": 230
+            },
+            {
+              "value": "CAN",
+              "count": 225
+            }
+          ]
+        },
+        "pur_reqn_item_currency": {
+          "dtype": "object",
+          "total": 69464,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 3,
+          "top_values": [
+            {
+              "value": "USD",
+              "count": 38436
+            },
+            {
+              "value": "SAR",
+              "count": 30976
+            },
+            {
+              "value": "EUR",
+              "count": 52
+            }
+          ]
+        },
+        "purchase_requisition_price": {
+          "dtype": "float64",
+          "total": 69464,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 5089,
+          "min": 0.01,
+          "max": 47500.0,
+          "mean": 246.592,
+          "median": 60.0,
+          "zeros": 0
+        },
+        "pur_reqn_item_total_amount": {
+          "dtype": "float64",
+          "total": 69464,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 9941,
+          "min": 0.0,
+          "max": 427823.14,
+          "mean": 1482.9396,
+          "median": 300.0,
+          "zeros": 86
+        },
+        "pur_reqn_price_quantity": {
+          "dtype": "int64",
+          "total": 69464,
+          "null_count": 0,
+          "fill_pct": 100.0,
+          "distinct": 3,
+          "min": 1.0,
+          "max": 100.0,
+          "mean": 1.1806,
+          "median": 1.0,
+          "zeros": 0
+        },
+        "material": {
+          "dtype": "float64",
+          "total": 69464,
+          "null_count": 12,
+          "fill_pct": 100.0,
+          "distinct": 5148,
+          "min": 2000000000.0,
+          "max": 2000136402.0,
+          "mean": 2000010478.4656,
+          "median": 2000007598.0,
+          "zeros": 0
+        },
+        "material_text": {
+          "dtype": "object",
+          "total": 69464,
+          "null_count": 12,
+          "fill_pct": 100.0,
+          "distinct": 4438
+        }
+      }
+    }
+  },
+  "join_quality": {
+    "po_items → po_headers": {
+      "label": "po_items → po_headers",
+      "total": 33664,
+      "matched": 33664,
+      "match_pct": 100.0,
+      "orphans": 0
+    },
+    "goods_receipts → po_headers": {
+      "label": "goods_receipts → po_headers",
+      "total": 11049,
+      "matched": 11049,
+      "match_pct": 100.0,
+      "orphans": 0
+    },
+    "confirmations → po_headers": {
+      "label": "confirmations → po_headers",
+      "total": 47412,
+      "matched": 47412,
+      "match_pct": 100.0,
+      "orphans": 0
+    },
+    "pr_items → po_headers": {
+      "label": "pr_items → po_headers",
+      "total": 69394,
+      "matched": 69394,
+      "match_pct": 100.0,
+      "orphans": 0
+    }
+  }
+}
