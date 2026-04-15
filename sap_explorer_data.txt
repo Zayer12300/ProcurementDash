@@ -1,0 +1,60 @@
+PS C:\temp\Procurement Dashboard\V2\V2\src> py .\pull_asn.py
+[1/3] Fetching $metadata ...
+   Found 56 EntityTypes, 56 EntitySets
+[2/3] Sampling up to 5 rows from each EntitySet ...
+   CFDUnitOfMeasureSet                                OK  (5 rows)
+   C_BPFNodeDetails                                   HTTP 500
+   C_BPFNodeDetailsSet                                HTTP 400
+   C_InboundDeliveryItemObjPg                         OK  (5 rows)
+   C_InboundDeliveryObjPg                             OK  (5 rows)
+   C_RelPurOrdStkTranspOrdDlvr                        OK  (5 rows)
+   C_SDDocumentPartnerCard                            HTTP 403
+   C_SerialNmbrEquipNmbrDelivery                      OK  (0 rows)
+   I_AdvShipReceiveRlvnce                             OK  (2 rows)
+   I_Customer_VH                                      OK  (5 rows)
+   I_FieldLogisticsIndicator                          OK  (4 rows)
+   I_FldLogsDelivRefLinkInfo                          OK  (0 rows)
+   I_GoodsMovementStatus                              OK  (4 rows)
+   I_GoodsMovementType                                OK  (5 rows)
+   I_InboundDelivery                                  OK  (5 rows)
+   I_InventorySpecialStockType                        OK  (5 rows)
+   I_LoadingGroup                                     OK  (1 rows)
+   I_Material                                         OK  (5 rows)
+   I_MaterialStdVH                                    OK  (5 rows)
+   I_OverallGoodsMovementStatus                       OK  (4 rows)
+   I_OverallPickingConfStatus                         OK  (4 rows)
+   I_OvrlWarehouseActyStatus                          OK  (4 rows)
+   I_PickingConfirmationStatus                        OK  (4 rows)
+   I_Plant                                            OK  (4 rows)
+   I_PurchasingDocumentStdVH                          OK  (5 rows)
+   I_PutawayStatus                                    OK  (4 rows)
+   I_SalesDocumentItemCategory                        OK  (5 rows)
+   I_ShippingPoint                                    OK  (5 rows)
+   I_ShippingPointStdVH                               OK  (5 rows)
+   I_StockCategory                                    OK  (4 rows)
+   I_StockType_2                                      OK  (5 rows)
+   I_StorageLocation                                  OK  (5 rows)
+   I_Supplier                                         OK  (5 rows)
+   I_Supplier_VH                                      OK  (5 rows)
+   I_TransportationGroup                              OK  (2 rows)
+   I_TrdCmplncCheckStatus                             OK  (5 rows)
+   I_Warehouse                                        OK  (4 rows)
+   I_WarehouseActivityStatus                          OK  (4 rows)
+   I_WarehouseExecutionStatus                         OK  (5 rows)
+   I_WarehouseStdVH                                   OK  (4 rows)
+   SAP__CoverPageSet                                  HTTP 500
+   SAP__Currencies                                    OK  (222 rows)
+   SAP__FormatSet                                     HTTP 500
+   SAP__HierarchySet                                  HTTP 500
+   SAP__MyDocumentDescriptions                        OK  (0 rows)
+   SAP__PDFFooterSet                                  HTTP 500
+   SAP__PDFHeaderSet                                  HTTP 500
+   SAP__PDFStandardSet                                HTTP 500
+   SAP__SignatureSet                                  HTTP 500
+   SAP__TableColumnsSet                               HTTP 500
+   SAP__UnitsOfMeasure                                OK  (514 rows)
+   SAP__ValueHelpSet                                  OK  (0 rows)
+   ZZ1_Delivery_PrioritySet                           OK  (4 rows)
+   ZZ1_FCN_CODESet                                    OK  (5 rows)
+   ZZ1_StatusSet                                      OK  (5 rows)
+   ZZ1_pkg_typeSet                                    OK  (5 rows)
