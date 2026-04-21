@@ -1,0 +1,100 @@
+{
+  "knowledgeDomain": "ASMO–ARAMCO Procurement Integration",
+  "purpose": "Provide AI agents and developers with authoritative business rules and visibility constraints for ASMO Procurement Dashboard reading from SAP S/4HANA",
+  "audience": ["AI Agents (ChatGPT, MiniMax)", "Developers", "Solution Architects"],
+
+  "businessContext": {
+    "operatingModel": "ASMO executes procurement on behalf of ARAMCO under controlled governance",
+    "ownership": {
+      "execution": "ASMO",
+      "financialAuthority": "ARAMCO",
+      "complianceAndGovernance": "ARAMCO",
+      "systemOfRecord": "SAP S/4HANA (ASMO tenant)"
+    },
+    "corePrinciple": "Status shown to users must reflect true business authority, not technical completion"
+  },
+
+  "dashboardIntent": {
+    "type": "Business Decision Cockpit",
+    "notAReport": true,
+    "userGoal": [
+      "Understand current status",
+      "Know who owns next action",
+      "Identify blockers",
+      "Ensure compliance"
+    ],
+    "antiGoals": [
+      "Do not expose SAP technical details",
+      "Do not expose ARAMCO internal finance data",
+      "Do not assume approvals are final unless explicitly confirmed"
+    ]
+  },
+
+  "procurementLifecycle": {
+    "PR_to_PO": {
+      "businessMeaning": "ASMO processes PRs and POs but ARAMCO approvals define final authority",
+      "keyRules": [
+        "Approved does not mean Released",
+        "Customer approval may still be pending even if ASMO approved",
+        "Multi-line documents use worst-line status",
+        "PR rejection requires mandatory business comment"
+      ],
+      "requiredVisibility": [
+        "Document Number",
+        "Document Type",
+        "Current Stage",
+        "Customer Approval Required",
+        "Customer Approval Status",
+        "Blocking Reason",
+        "Ageing (Business Days)"
+      ]
+    },
+
+    "sourcing": {
+      "businessMeaning": "ASMO runs sourcing while enforcing ARAMCO governance",
+      "keyRules": [
+        "Bidder list may require customer approval",
+        "Technical evaluators must not see prices",
+        "Multiple awards must create multiple POs",
+        "Award approval may occur in BTP"
+      ],
+      "restrictedData": [
+        "Pricing",
+        "Commercial scores",
+        "Negotiation notes"
+      ]
+    },
+
+    "purchaseAgreements": {
+      "businessMeaning": "ASMO manages PA lifecycle, ARAMCO is legal consumer",
+      "keyRules": [
+        "PA must not auto-activate without approvals",
+        "PA amendments must not add account assignments",
+        "Blocked suppliers may prevent PA creation"
+      ],
+      "requiredVisibility": [
+        "PA Number",
+        "PA Type",
+        "Supplier",
+        "Validity",
+        "Status",
+        "Customer Approval Status"
+      ]
+    }
+  },
+
+  "supplierManagement": {
+    "registration": {
+      "rules": [
+        "Government suppliers do not require VAT",
+        "CR and GOSI validation is mandatory",
+        "Duplicate CR must not block valid updates"
+      ]
+    },
+    "qualification": {
+      "rules": [
+        "Inspectable and non-inspectable materials follow different logic",
+        "ZPLT/ZMFR creation is conditional",
+        "Returned qualification must not remap unnecessarily"
+      ]
+    },
